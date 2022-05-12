@@ -1,0 +1,59 @@
+header {
+    border: 1px solid red;
+    height: 10vh;
+    display: flex;
+}
+
+nav {
+    width: 100%;
+    display: grid;
+    grid: auto-flow / 1fr 1fr;
+    align-items: center;
+}
+
+nav ul {
+    justify-self: end;
+}
+
+nav ul li {
+    display: inline-flex;
+    padding-left: 30px;
+}
+
+.content-title {
+    flex-basis: 15%;
+    border-right-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.content-body {
+    flex-basis: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#page-title {
+    font-size: 200%;
+}
+
+#about-me {
+    border: 1px solid blueviolet;
+    height: 20vh;
+}
+
+#work {
+    border: 1px solid blueviolet;
+    height: 200vh;
+}
+
+#contact-info {
+    border: 1px solid blueviolet;
+    height: 20vh;
+}
+
+#about-me, #work, #contact-info {
+    display: flex;
+    flex-wrap: wrap;
+}
