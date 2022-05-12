@@ -9,32 +9,62 @@ nav {
     display: grid;
     grid: auto-flow / 1fr 1fr;
     align-items: center;
+    background-color: #fae596;
 }
 
 nav ul {
-    justify-self: end;
+    place-self: end;
+}
+
+nav ul a {
+    font-size: 150%;
+    color: darkgray;
+    font-weight: bold;
 }
 
 nav ul li {
     display: inline-flex;
-    padding-left: 30px;
+    padding-left: 5vh;
+}
+
+main {
+    display: grid;
 }
 
 .content-title {
     flex-basis: 15%;
-    border-right-color: black;
-    border-right-width: 1px;
-    border-right-style: solid;
+    border-right: black 1px solid;
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #dddfd4;
 }
 
 .content-body {
-    flex-basis: 80%;
-    display: flex;
-    flex-wrap: wrap;
+    flex-basis: 85%;
+    display: grid;
+    background-image: linear-gradient(to right, #3fb0ac, #173e43);
+}
+
+.normal-pics {
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    justify-content: space-around;
+}
+.norm-pic {
+    height: 30vh;
+    border: 1px solid black;
+}
+
+.work-label {
+    z-index: 2;
 }
 
 
-#page-title {
+#page-title, #bigger-title {
     font-size: 200%;
 }
 
@@ -45,7 +75,7 @@ nav ul li {
 
 #work {
     border: 1px solid blueviolet;
-    height: 200vh;
+    grid: 1fr 1fr / 1fr 1fr;
 }
 
 #contact-info {
@@ -53,7 +83,27 @@ nav ul li {
     height: 20vh;
 }
 
+
+
 #about-me, #work, #contact-info {
     display: flex;
     flex-wrap: wrap;
+}
+
+#first-picture{
+    display: flex;
+    flex-basis: 100%;
+    border: 1px solid violet;
+    height: 60vh;
+    justify-content: center;
+}
+
+#gmail-clip, #phone-clip, #linkedin-clip, #github-clip {
+    height: 10vh;
+}
+
+#contact-body {
+    display: inherit;
+    justify-content: space-evenly;
+    align-items: center;
 }
