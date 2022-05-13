@@ -45,17 +45,17 @@ main {
 
 .content-body {
     flex-basis: 85%;
-    display: grid;
     background-image: linear-gradient(to right, #3fb0ac, #173e43);
 }
 
 .normal-pics {
     display: grid;
-    grid: 1fr / 1fr 1fr;
-    justify-content: space-around;
+    grid: 1fr 1fr / 1fr 1fr;
 }
 
 .norm-pic {
+    display: grid;
+    justify-content: space-around;
     height: 30vh;
     border: 1px solid black;
     object-fit: fill;
@@ -71,22 +71,19 @@ main {
     font-size: 200%;
 }
 
-#about-me {
-    border: 1px solid blueviolet;
+#about-me,
+#contact-info {
     height: 20vh;
 }
 
+
 #work {
-    border: 1px solid blueviolet;
     grid: 1fr 1fr / 1fr 1fr;
 }
 
-#contact-info {
-    border: 1px solid blueviolet;
+#contact-info {   
     height: 20vh;
 }
-
-
 
 #about-me,
 #work,
@@ -95,12 +92,12 @@ main {
     flex-wrap: wrap;
 }
 
+
 #first-picture {
     display: flex;
     flex-basis: 100%;
-    border: 1px solid violet;
     height: 60vh;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 #gmail-clip,
@@ -128,18 +125,37 @@ main {
     margin-top: 15vh;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1515px) {
 
-    /* on tablets, set columns of norm-pics to only be 50% of the width and not grow */
+    main {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-grow: auto;
+    }
+
+    .content-title {
+        display: none
+    }
+
+    nav,
+    .content-body {
+        flex-basis: 100%;
+    }
+
+    #nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    nav,
     #about-me,
     #work,
     #contact-info {
-        flex: 25%;
+        display: flex;
     }
+
+
 }
-
-
-/* media query for larger screens */
-@media screen and (min-width: 992px) {}
-
-.card-column {}
