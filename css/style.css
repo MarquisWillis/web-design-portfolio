@@ -54,9 +54,11 @@ main {
     grid: 1fr / 1fr 1fr;
     justify-content: space-around;
 }
+
 .norm-pic {
     height: 30vh;
     border: 1px solid black;
+    object-fit: fill;
 }
 
 .work-label {
@@ -64,7 +66,8 @@ main {
 }
 
 
-#page-title, #bigger-title {
+#page-title,
+#bigger-title {
     font-size: 200%;
 }
 
@@ -85,25 +88,58 @@ main {
 
 
 
-#about-me, #work, #contact-info {
+#about-me,
+#work,
+#contact-info {
     display: flex;
     flex-wrap: wrap;
 }
 
-#first-picture{
+#first-picture {
     display: flex;
     flex-basis: 100%;
     border: 1px solid violet;
     height: 60vh;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-#gmail-clip, #phone-clip, #linkedin-clip, #github-clip {
+#gmail-clip,
+#phone-clip,
+#linkedin-clip,
+#github-clip {
     height: 10vh;
+}
+
+#linkedin-clip,
+#github-clip {
+    cursor: pointer;
 }
 
 #contact-body {
     display: inherit;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
 }
+
+#contact-body section {
+    position: absolute;
+    z-index: 1;
+    margin-top: 15vh;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* on tablets, set columns of norm-pics to only be 50% of the width and not grow */
+    #about-me,
+    #work,
+    #contact-info {
+        flex: 25%;
+    }
+}
+
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {}
+
+.card-column {}
