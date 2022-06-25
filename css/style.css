@@ -31,6 +31,13 @@ main {
     display: grid;
 }
 
+h2 {
+    color:aliceblue;
+    text-align: center;
+}
+
+
+
 .content-title {
     flex-basis: 15%;
     border-right: black 1px solid;
